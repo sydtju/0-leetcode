@@ -24,7 +24,7 @@ int myAtoi(char *str) {
         for(int j=i;str[j]!='\0';j++){
             if(str[j]>='0'&&str[j]<='9'){
                 result_temp=result_temp*10+(str[j]-'0');
-                if(flag==1&&result_temp>=2147483647) return 2147483647;
+                if(flag==1&&result_temp>=2147483647) return 2147483647;//极值处理
                 if(flag==-1&&result_temp>=2147483648) return -2147483648;
             }
             else{
