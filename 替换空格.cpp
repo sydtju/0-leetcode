@@ -24,3 +24,20 @@ public:
 	return result;
     }
 };
+//这种方式  还不如上面的呢  因为对vector的插入时效率很低的
+string replaceSpace(string iniString, int length) {
+	// write code here
+	int k = 0;
+	while(k < length)
+	{
+		if( ' ' ==iniString[k])
+		{
+			iniString[k] = '0'; //先替换
+			iniString.insert(k, 1, '2');
+			iniString.insert(k, 1, '%');
+			length += 2;
+		}
+		k++;
+	}
+	return iniString;
+	}
