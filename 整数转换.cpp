@@ -12,6 +12,20 @@ public:
     int calcCost(int A, int B) {
         // write code here
         int c=A^B;
+        int count=0;
+        while(c){
+            c=c&(c-1);
+            count++;
+        }
+        return count;
+    }
+};
+
+class Transform {
+public:
+    int calcCost(int A, int B) {
+        // write code here
+        int c=A^B;
         int i=0;
         int f=1;
         while(f){
