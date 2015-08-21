@@ -21,3 +21,16 @@ public:
         return i;
     }
 };
+//更佳的解题方式
+class Transform {
+public:
+    int calcCost(int A, int B) {
+        // write code here
+        int count = 0;
+        int c;
+        for (c=A^B;c!=0;c=c&(c-1)){
+            count ++;
+        }
+        return count;
+    }
+};
