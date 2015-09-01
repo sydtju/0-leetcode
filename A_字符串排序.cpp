@@ -19,7 +19,7 @@ public:
         do{
             res.push_back(A);
         }
-        while(prev_permutation(A.begin(),A.end()));
+        while(prev_permutation(A.begin(),A.end()));//只是针对的是不重复的情况  而且重复的元素会被合并
         return res;
     }
 };
